@@ -16,6 +16,7 @@ RUN apt-get update -y && \
     pip3 install --upgrade pip
 
 # Install python packages
+RUN pip install setuptools
 RUN pip install numpy onnxruntime flask pillow gunicorn requests && \
     apt-get clean
 
