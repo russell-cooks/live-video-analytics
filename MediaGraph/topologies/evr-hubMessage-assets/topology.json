@@ -90,10 +90,10 @@
             "nodeName": "rtspSource"
           }
         ],
-        "activationEvaluationWindow": "PT10S",
-        "activationSignalOffset": "-PT7S",
-        "minimumActivationTime": "PT30S",
-        "maximumActivationTime": "PT30S"
+        "activationEvaluationWindow": "PT1S",
+        "activationSignalOffset": "-PT5S",
+        "minimumActivationTime": "PT2S",
+        "maximumActivationTime": "PT7S"
       },
       {
         "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
