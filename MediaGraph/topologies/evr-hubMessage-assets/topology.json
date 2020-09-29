@@ -90,7 +90,7 @@
             "nodeName": "rtspSource"
           }
         ],
-        "activationEvaluationWindow": "PT30,
+        "activationEvaluationWindow": "PT1S",
         "activationSignalOffset": "-PT5S",
         "minimumActivationTime": "PT2S",
         "maximumActivationTime": "PT7S"
