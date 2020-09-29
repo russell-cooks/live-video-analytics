@@ -28,6 +28,12 @@
         "default": "recordingTrigger"
       },
       {
+        "name": "hubSourceInput2",
+        "type": "String",
+        "description": "input name for hub source",
+        "default": "tempSensor"
+      },
+      {
         "name": "inferencingUrl",
         "type": "String",
         "description": "inferencing Url",
@@ -75,7 +81,7 @@
       {
         "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSource",
         "name": "iotMessageSource",
-        "hubInputName": "${hubSourceInput}"
+        "hubInputName": "${hubSourceInput2}"
       }
     ],
     "processors": [
