@@ -4,74 +4,15 @@
   "properties": {
     "description": "Event-based video recording to Assets based on specific objects being detected by external inference engine",
     "parameters": [
-      {
-        "name": "rtspUserName",
-        "type": "String",
-        "description": "rtsp source user name.",
-        "default": "dummyUserName"
-      },
-      {
-        "name": "rtspPassword",
-        "type": "String",
-        "description": "rtsp source password.",
-        "default": "dummyPassword"
-      },
-      {
-        "name": "rtspUrl",
-        "type": "String",
-        "description": "rtsp Url"
-      },
+      
       {
         "name": "hubSourceInput",
         "type": "String",
         "description": "input name for hub source",
-        "default": "recordingTrigger"
-      },
-      {
-        "name": "inferencingUrl",
-        "type": "String",
-        "description": "inferencing Url",
-        "default": "http://yolov3/score"
-      },
-      {
-        "name": "inferencingUserName",
-        "type": "String",
-        "description": "inferencing endpoint user name.",
-        "default": "dummyUserName"
-      },
-      {
-        "name": "inferencingPassword",
-        "type": "String",
-        "description": "inferencing endpoint password.",
-        "default": "dummyPassword"
-      },
-      {
-        "name": "imageEncoding",
-        "type": "String",
-        "description": "image encoding for frames",
-        "default": "bmp"
-      },
-      {
-        "name": "hubSinkOutputName",
-        "type": "String",
-        "description": "hub sink output name",
-        "default": "detectedObjects"
+        "default": "tempSensor"
       }
     ],
     "sources": [
-      {
-        "@type": "#Microsoft.Media.MediaGraphRtspSource",
-        "name": "rtspSource",
-        "endpoint": {
-          "@type": "#Microsoft.Media.MediaGraphUnsecuredEndpoint",
-          "url": "${rtspUrl}",
-          "credentials": {
-            "@type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
-            "username": "${rtspUserName}",
-            "password": "${rtspPassword}"
-          }
-        }
-      },
       {
         "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSource",
         "name": "iotMessageSource",
@@ -85,9 +26,6 @@
         "inputs": [
           {
             "nodeName": "iotMessageSource"
-          },
-          {
-            "nodeName": "rtspSource"
           }
         ],
         "activationEvaluationWindow": "PT1S",
@@ -95,46 +33,7 @@
         "minimumActivationTime": "PT30S",
         "maximumActivationTime": "PT30S"
       },
-      {
-        "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
-        "name": "frameRateFilter",
-        "maximumFps": "1.0",
-        "inputs": [
-          {
-            "nodeName": "rtspSource"
-          }
-        ]
-      },
-      {
-        "@type": "#Microsoft.Media.MediaGraphHttpExtension",
-        "name": "inferenceClient",
-        "endpoint": {
-          "@type": "#Microsoft.Media.MediaGraphUnsecuredEndpoint",
-          "url": "${inferencingUrl}",
-          "credentials": {
-            "@type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
-            "username": "${inferencingUserName}",
-            "password": "${inferencingPassword}"
-          }
-        },
-        "image": {
-          "scale": {
-            "mode": "preserveAspectRatio",
-            "width": "416",
-            "height": "416"
-          },
-          "format": {
-            "@type": "#Microsoft.Media.MediaGraphImageFormatEncoded",
-            "encoding": "${imageEncoding}"
-          }
-        },
-        "inputs": [
-          {
-            "nodeName": "frameRateFilter"
-          }
-        ]
-      }
-    ],
+    
     "sinks": [
       {
         "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSink",
