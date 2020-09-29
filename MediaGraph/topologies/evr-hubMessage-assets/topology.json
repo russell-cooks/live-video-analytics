@@ -149,7 +149,10 @@
         "inputs": [
           {
             "nodeName": "inferenceClient"
-          }
+          },
+          {
+            "nodeName": "signalGateProcessor"
+          },
         ]
       },
       {
