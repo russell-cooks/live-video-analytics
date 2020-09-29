@@ -9,7 +9,7 @@
         "name": "hubSourceInput",
         "type": "String",
         "description": "input name for hub source",
-        "default": "tempSensor"
+        "default": "recordingTrigger"
       }
     ],
     "sources": [
