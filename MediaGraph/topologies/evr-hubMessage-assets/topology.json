@@ -32,7 +32,8 @@
         "activationSignalOffset": "-PT5S",
         "minimumActivationTime": "PT30S",
         "maximumActivationTime": "PT30S"
-      },
+      }
+    ],
     
     "sinks": [
       {
@@ -49,4 +50,5 @@
         ]
       }
     ]
+ }
 }
