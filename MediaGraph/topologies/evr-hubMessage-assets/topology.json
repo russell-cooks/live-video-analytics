@@ -36,16 +36,6 @@
     
     "sinks": [
       {
-        "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSink",
-        "name": "hubSink",
-        "hubOutputName": "${hubSinkOutputName}",
-        "inputs": [
-          {
-            "nodeName": "inferenceClient"
-          }
-        ]
-      },
-      {
         "@type": "#Microsoft.Media.MediaGraphAssetSink",
         "name": "assetSink",
         "assetNamePattern": "sampleAssetFromEVR-LVAEdge-${System.DateTime}",
@@ -59,5 +49,4 @@
         ]
       }
     ]
-  }
 }
