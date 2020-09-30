@@ -88,7 +88,8 @@
       {
         "@type": "#Microsoft.Media.MediaGraphSignalGateProcessor",
         "name": "signalGateProcessor",
-          {
+        "inputs": [
+        {
             "nodeName": "rtspSource"
           }
         ],
