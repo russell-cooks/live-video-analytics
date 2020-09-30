@@ -98,6 +98,45 @@
         "minimumActivationTime": "PT30S",
         "maximumActivationTime": "PT30S"
       }
+       {
+        "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
+        "name": "frameRateFilter",
+        "maximumFps": "1.0",
+        "inputs": [
+          {
+            "nodeName": "rtspSource"
+          }
+        ]
+      },
+      {
+        "@type": "#Microsoft.Media.MediaGraphHttpExtension",
+        "name": "inferenceClient",
+        "endpoint": {
+          "@type": "#Microsoft.Media.MediaGraphUnsecuredEndpoint",
+          "url": "${inferencingUrl}",
+          "credentials": {
+            "@type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+            "username": "${inferencingUserName}",
+            "password": "${inferencingPassword}"
+          }
+        },
+        "image": {
+          "scale": {
+            "mode": "preserveAspectRatio",
+            "width": "416",
+            "height": "416"
+          },
+          "format": {
+            "@type": "#Microsoft.Media.MediaGraphImageFormatEncoded",
+            "encoding": "${imageEncoding}"
+          }
+        },
+        "inputs": [
+          {
+            "nodeName": "frameRateFilter"
+          }
+        ]
+      }
     ],
     "sinks": [
       {
@@ -106,7 +145,7 @@
         "hubOutputName": "${hubSinkOutputName}",
         "inputs": [
           {
-            "nodeName": "signalGateProcessor"
+            "nodeName": "inferenceClient"
           },
         ]
       },
