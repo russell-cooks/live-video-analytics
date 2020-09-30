@@ -89,7 +89,10 @@
         "@type": "#Microsoft.Media.MediaGraphSignalGateProcessor",
         "name": "signalGateProcessor",
         "inputs": [
-        {
+         {
+            "nodeName": "iotMessageSource"
+         },
+         {
             "nodeName": "rtspSource"
           }
         ],
