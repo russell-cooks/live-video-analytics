@@ -110,35 +110,6 @@
             "nodeName": "rtspSource"
           }
         ]
-      },
-      {
-        "@type": "#Microsoft.Media.MediaGraphHttpExtension",
-        "name": "inferenceClient",
-        "endpoint": {
-          "@type": "#Microsoft.Media.MediaGraphUnsecuredEndpoint",
-          "url": "${inferencingUrl}",
-          "credentials": {
-            "@type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
-            "username": "${inferencingUserName}",
-            "password": "${inferencingPassword}"
-          }
-        },
-        "image": {
-          "scale": {
-            "mode": "preserveAspectRatio",
-            "width": "416",
-            "height": "416"
-          },
-          "format": {
-            "@type": "#Microsoft.Media.MediaGraphImageFormatEncoded",
-            "encoding": "${imageEncoding}"
-          }
-        },
-        "inputs": [
-          {
-            "nodeName": "frameRateFilter"
-          }
-        ]
       }
     ],
     "sinks": [
@@ -147,9 +118,6 @@
         "name": "hubSink",
         "hubOutputName": "${hubSinkOutputName}",
         "inputs": [
-          {
-            "nodeName": "inferenceClient"
-          },
           {
             "nodeName": "signalGateProcessor"
           },
