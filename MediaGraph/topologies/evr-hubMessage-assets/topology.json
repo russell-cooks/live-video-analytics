@@ -109,7 +109,7 @@
         "hubOutputName": "${hubSinkOutputName}",
         "inputs": [
           {
-            "nodeName": "tempSensor"
+            "nodeName": "iotMessageSource"
           },
         ]
       },
