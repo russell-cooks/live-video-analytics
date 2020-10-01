@@ -97,9 +97,9 @@
           }
         ],
         "activationEvaluationWindow": "PT1S",
-        "activationSignalOffset": "-PT5S",
-        "minimumActivationTime": "PT30S",
-        "maximumActivationTime": "PT30S"
+        "activationSignalOffset": "-PT10S",
+        "minimumActivationTime": "PT20S",
+        "maximumActivationTime": "PT60S"
       },
        {
         "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
