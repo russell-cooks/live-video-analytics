@@ -185,6 +185,19 @@
             "nodeName": "signalGateProcessor"
           }
         ]
+      },
+      {
+        "@type": "#Microsoft.Media.MediaGraphAssetSink",
+        "name": "assetSink",
+        "assetNamePattern": "sampleAssetFromEVR-LVAEdge-${System.DateTime}",
+        "segmentLength": "PT30S",
+        "LocalMediaCacheMaximumSizeMiB": "2048",
+        "localMediaCachePath": "/var/lib/azuremediaservices/tmp/",
+        "inputs": [
+          {
+            "nodeName": "signalGateProcessor2"
+          }
+        ]
       }
     ]
   }
