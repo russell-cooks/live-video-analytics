@@ -31,7 +31,7 @@
         "name": "hubSourceInput2",
         "type": "String",
         "description": "input name for hub source",
-        "default": "tempSensor"
+        "default": "recordingTrigger2"
       },
       {
         "name": "inferencingUrl",
@@ -81,6 +81,11 @@
       {
         "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSource",
         "name": "iotMessageSource",
+        "hubInputName": "${hubSourceInput}"
+      },
+      {
+        "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSource",
+        "name": "iotMessageSource2",
         "hubInputName": "${hubSourceInput2}"
       }
     ],
@@ -89,19 +94,35 @@
         "@type": "#Microsoft.Media.MediaGraphSignalGateProcessor",
         "name": "signalGateProcessor",
         "inputs": [
-         {
+          {
             "nodeName": "iotMessageSource"
-         },
-         {
+          },
+          {
             "nodeName": "rtspSource"
           }
         ],
         "activationEvaluationWindow": "PT1S",
-        "activationSignalOffset": "-PT10S",
-        "minimumActivationTime": "PT20S",
-        "maximumActivationTime": "PT60S"
+        "activationSignalOffset": "-PT5S",
+        "minimumActivationTime": "PT30S",
+        "maximumActivationTime": "PT30S"
       },
-       {
+      {
+        "@type": "#Microsoft.Media.MediaGraphSignalGateProcessor",
+        "name": "signalGateProcessor2",
+        "inputs": [
+          {
+            "nodeName": "iotMessageSource2"
+          },
+          {
+            "nodeName": "rtspSource"
+          }
+        ],
+        "activationEvaluationWindow": "PT1S",
+        "activationSignalOffset": "-PT5S",
+        "minimumActivationTime": "PT30S",
+        "maximumActivationTime": "PT30S"
+      },
+      {
         "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
         "name": "frameRateFilter",
         "maximumFps": "1.0",
@@ -149,7 +170,7 @@
         "inputs": [
           {
             "nodeName": "inferenceClient"
-          },
+          }
         ]
       },
       {
