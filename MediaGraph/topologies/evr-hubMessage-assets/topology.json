@@ -188,7 +188,7 @@
       },
       {
         "@type": "#Microsoft.Media.MediaGraphAssetSink",
-        "name": "assetSink",
+        "name": "assetSink2",
         "assetNamePattern": "sampleAssetFromEVR-LVAEdge-${System.DateTime}",
         "segmentLength": "PT30S",
         "LocalMediaCacheMaximumSizeMiB": "2048",
