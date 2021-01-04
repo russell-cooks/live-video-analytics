@@ -198,15 +198,15 @@
         ]
       },
       {
-				"@type": "#Microsoft.Media.MediaGraphFileSink",
-				"name": "fileSink",
-				"inputs": [
-					{
-						"nodeName": "motionsignalGateProcessor"
-					}
-				],
-				"filePathPattern": "/var/media/sampleFilesFromEVR-${fileSinkOutputName}-${System.DateTime}"
-			}
+	"@type": "#Microsoft.Media.MediaGraphFileSink",
+	"name": "fileSink",
+	"inputs": [
+	  {
+	    "nodeName": "motionsignalGateProcessor"
+	  }
+	 ],
+	 "filePathPattern": "/var/media/sampleFilesFromEVR-${fileSinkOutputName}-${System.DateTime}"
+      }
     ]
   }
 }
