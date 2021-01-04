@@ -193,7 +193,7 @@
         "localMediaCachePath": "/var/lib/azuremediaservices/tmp/",
         "inputs": [
           {
-            "nodeName": "signalGateProcessor"
+            "nodeName": "hubsignalGateProcessor"
           }
         ]
       },
