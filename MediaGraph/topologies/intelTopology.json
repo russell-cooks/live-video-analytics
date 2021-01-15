@@ -1,0 +1,115 @@
+{
+    "apiVersion": "2.0",
+    "operations": [
+        {
+            "opName": "GraphTopologyList",
+            "opParams": {}
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "Press Enter to continue"
+            }
+        },
+        {
+            "opName": "GraphInstanceList",
+            "opParams": {}
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "Press Enter to continue"
+            }
+        },
+        {
+            "opName": "GraphTopologySet",
+            "opParams": {
+                "topologyFile": "C:\\Users\\russellcooks\\Documents\\Intel Testing\\topology.json"
+            }
+        },
+        {
+            "opName": "GraphInstanceSet",
+            "opParams": {
+                "name": "Sample-Graph-3",
+                "properties": {
+                    "topologyName": "InferencingWithGrpcExtension",
+                    "description": "Sample graph description",
+                    "parameters": [
+                        {
+                            "name": "rtspUrl",
+                            "value": "rtsp://rtspsim:554/media/lots_015.mkv"                           
+                        },
+                        {
+                            "name": "rtspUserName",
+                            "value": "demo"
+                        },
+                        {
+                            "name": "rtspPassword",
+                            "value": "rUready4PP"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "opName": "GraphInstanceActivate",
+            "opParams": {
+                "name": "Sample-Graph-3"
+            }
+        },
+        {
+            "opName": "GraphInstanceList",
+            "opParams": {}
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "The topology will now be deactivated. Press Enter to continue"
+            }
+        },
+        {
+            "opName": "GraphInstanceDeactivate",
+            "opParams": {
+                "name": "Sample-Graph-3"
+            }
+        },
+        {
+            "opName": "GraphInstanceDelete",
+            "opParams": {
+                "name": "Sample-Graph-3"
+            }
+        },
+        {
+            "opName": "GraphInstanceList",
+            "opParams": {}
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "Press Enter to continue"
+            }
+        },
+        {
+            "opName": "GraphTopologyDelete",
+            "opParams": {
+                "name": "InferencingWithGrpcExtension"
+            }
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "Press Enter to continue"
+            }
+        },
+        {
+            "opName": "GraphTopologyList",
+            "opParams": {}
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "Press Enter to continue"
+            }
+        }
+    ]
+}
