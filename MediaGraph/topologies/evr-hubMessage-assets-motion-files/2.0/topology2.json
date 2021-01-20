@@ -202,7 +202,9 @@
 	    "nodeName": "motionsignalGateProcessor"
 	  }
 	 ],
-	 "filePathPattern": "/var/media/sampleFilesFromEVR-${fileSinkOutputName}-${System.DateTime}"
+	 "fileNamePattern": "sampleFilesFromEVR-${System.DateTime}",
+         "maximumSizeMiB":"512",
+         "baseDirectoryPath":"/var/media"
       }
     ]
   }
