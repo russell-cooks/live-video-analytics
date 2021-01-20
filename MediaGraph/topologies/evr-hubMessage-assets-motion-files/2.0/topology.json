@@ -153,8 +153,7 @@
             "height": "416"
           },
           "format": {
-            "@type": "#Microsoft.Media.MediaGraphImageFormatBmp",
-            "encoding": "${imageEncoding}"
+            "@type": "#Microsoft.Media.MediaGraphImageFormatBmp"
           }
         },
         "inputs": [
