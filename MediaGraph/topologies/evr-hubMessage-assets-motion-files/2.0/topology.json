@@ -1,6 +1,6 @@
 {
   "@apiVersion": "2.0",
-  "name": "EVRtoAssetsOnObjDetect",
+  "name": "EVRtoAssetsOnObjDetectAndToFilesOnMotion",
   "properties": {
     "description": "Event-based video recording to assets based on specific objects being detected by external inference engine and to edge device based on motion being detected",
     "parameters": [
