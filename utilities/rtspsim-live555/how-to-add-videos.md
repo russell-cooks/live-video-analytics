@@ -12,7 +12,7 @@ Under the **Containers** blade, click **+ Container** to create a new container.
 Name the new container and set the Public access level to **Container (anonymous read access for containers and blobs)**
 <br>
 <p align="center">
-  <img src="./rtspsim-live555/rtsp1.png" title="New Container"/>
+  <img src="rtsp1.png" title="New Container"/>
 </p>
 <br>
 
