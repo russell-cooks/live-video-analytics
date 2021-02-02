@@ -1,6 +1,6 @@
 # Copying your own videos into a folder for RTSPsim
 
-[Binding](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-access-host-storage-from-module?view=iotedge-2018-06) is a method used to link module storage to device storage. This method is typically used by the rtspsim module for access to the video file that is going be live streamed.
+[Binding](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-access-host-storage-from-module?view=iotedge-2018-06) is a method used to link module storage to device storage. This method is typically used by the RTSPSim module for access to the video file that is going be live streamed.
 
 First, upload your video to a public blob container in an Azure Storage Account **OR** Upload your video to GitHub
 
