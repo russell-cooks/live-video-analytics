@@ -12,14 +12,14 @@ Under the **Containers** blade, click **+ Container** to create a new container.
 Name the new container and set the Public access level to **Container (anonymous read access for containers and blobs)**
 <br>
 <p align="center">
-  <img src="rtsp1.png" title="New Container"/>
+  <img src="media/rtsp1.png" title="New Container"/>
 </p>
 <br>
 
 Under the **Storage Explorer (preview)** blade, navigate to your newly created container under **BLOB CONTAINERS** and upload your video file (ensure that your video file format is supported by Live555, Ex: .mkv)
 <br>
 <p align="center">
-  <img src="rtsp2.png" title="Upload video file"/>
+  <img src="media/rtsp2.png" title="Upload video file"/>
 </p>
 <br>
 
@@ -33,7 +33,7 @@ After uploading your video file:
 
 <br>
 <p align="center">
-  <img src="rtsp3.png" title="Copy URL from GitHub"/>
+  <img src="media/rtsp3.png" title="Copy URL from GitHub"/>
 </p>
 <br>
 
