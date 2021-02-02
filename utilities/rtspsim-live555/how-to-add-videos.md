@@ -19,7 +19,7 @@ Name the new container and set the Public access level to **Container (anonymous
 Under the **Storage Explorer (preview)** blade, navigate to your newly created container under **BLOB CONTAINERS** and upload your video file (ensure that your video file format is supported by Live555, Ex: .mkv)
 <br>
 <p align="center">
-  <img src="rtsp2.png" title="New Container"/>
+  <img src="rtsp2.png" title="Upload video file"/>
 </p>
 <br>
 
@@ -33,7 +33,7 @@ After uploading your video file:
 
 <br>
 <p align="center">
-  <img src="rtsp3.png" title="New Container"/>
+  <img src="rtsp3.png" title="Copy URL from GitHub"/>
 </p>
 <br>
 
